@@ -3,6 +3,7 @@
 #include "CameraSettings.h"
 #include <cmath>
 using std::endl;
+using std::cin;
 
 float CalculateExposureVariance(const float shutterSpeed, const float aperture, const int iso) {
 	return std::log2((std::pow(aperture, 2) * 100) / (iso / shutterSpeed));
@@ -25,18 +26,17 @@ void main()
 		<< "If you have an image that is perfectly exposed and want to know the EV of the scene, this tool can be useful." << std::endl
 		<< endl;
 
-	// Input values
-	std::cout
-		<< "Input Values:" << endl
-		<< "	input shutter speed value (1/[valToInput]):	" << "[INPUTTED VALUE]" << endl
-		<< "	input aperture value (f[valToInput]):		" << "[INPUTTED VALUE]" << endl // ask user if they want to input the exact focal ratio, or use a standard value. also inform them, that their camera does not say the actual focal ratio, but in reality is rounded up. Also ask user if they wish to input the diameter of the lens and the focal ratio.
-		<< "	input iso:					" << "[INPUTTED VALUE]" << endl
-		<< endl;
-
 	//Define Values
-	const float inshutterSpeed = 109.0f;	// [1/A]	shutterSpeed = A
-	const float inaperture = 1.5f;		// [fA]		aperture = A
-	const int iniso = 125; 
+	float inshutterSpeed;	// [1/A]	shutterSpeed = A
+	float inaperture;		// [fA]		aperture = A
+	int iniso; 
+
+	// Input Values
+	std::cout	<< "Input Values:" << endl
+				<< "	input shutter speed value (1/[valToInput]):	"; cin >> inshutterSpeed;
+	std::cout	<< "	input aperture value (f[valToInput]): "; cin >> inaperture;	// ask user if they want to input the exact focal ratio, or use a standard value. also inform them, that their camera does not say the actual focal ratio, but in reality is rounded up. Also ask user if they wish to input the diameter of the lens and the focal ratio.
+	std::cout	<< "	input iso: "; cin >> iniso;
+	std::cout	<< endl;
 
 	// Display Values
 	std::cout
