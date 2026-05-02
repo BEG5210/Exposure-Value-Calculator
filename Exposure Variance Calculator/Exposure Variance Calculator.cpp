@@ -10,7 +10,7 @@ float CalculateExposureVariance(const float shutterSpeed, const float aperture, 
 	return std::log2((std::pow(aperture, 2) * 100) / (iso / shutterSpeed));
 }
 
-void main()
+int main()
 {
 
 	// Print Copyright 
@@ -55,7 +55,18 @@ void main()
 			<< endl;
 
 	// Display Answer
-	cout	<< "Exposure Variance Equals:	" << EVoutput << endl;	//also print equivalent scenes for this EV.
+	cout	<< "Exposure Variance Equals:	" << EVoutput << endl	//also print equivalent scenes for this EV.
+			<< endl;
+
+	// Close Program
+	cout << "Press [ENTER] to close.";
+
+	cin.ignore();
+	cin.get();
+
+	cout << "Closing . . .";
+
+	return 0;
 }
 
 
