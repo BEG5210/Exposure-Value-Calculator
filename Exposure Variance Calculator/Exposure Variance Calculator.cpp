@@ -1,7 +1,8 @@
 
 #include <iostream>
-#include "CameraSettings.h"
 #include <cmath>
+#include "CameraSettings.h"
+#include "Printer.h"
 
 using std::endl;
 using std::cin;
