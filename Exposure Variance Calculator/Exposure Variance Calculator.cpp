@@ -11,7 +11,7 @@ using std::cout;
 using std::string;
 
 
-float CalculateExposureVariance(const float shutterSpeed, const float aperture, const int iso) {
+float calculateExposureValue(const float shutterSpeed, const float aperture, const int iso) {
 	return std::log2((std::pow(aperture, 2) * 100) / (iso / shutterSpeed));
 }
 
@@ -89,7 +89,7 @@ int main()
 	// Calculate Equation
 	cout	<< "Calculating Equation:" << endl
 			<< "	Calculating..." << endl;
-	const float EVoutput = CalculateExposureVariance(shutterSpeed, aperture, iso);
+	const float EVoutput = calculateExposureValue(shutterSpeed, aperture, iso);
 	cout	<< "	Calculated Successfully!" << endl
 			<< endl;
 
