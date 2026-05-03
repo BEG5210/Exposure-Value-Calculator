@@ -16,6 +16,7 @@ Shortenings:
 #include <cmath>
 
 #include "ISODetail.h"
+#include "Constants.h"
 
 class CameraSettings {
 public:

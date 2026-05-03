@@ -3,6 +3,7 @@
 #include <cmath>
 #include "CameraSettings.h"
 #include "Printer.h"
+#include "Constants.h"
 
 using std::endl;
 using std::cin;
