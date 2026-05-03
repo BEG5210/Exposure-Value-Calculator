@@ -75,10 +75,6 @@ int main()
 	inshutterSpeed = getValidNumber("    input shutter speed value (1/[valToInput]): ");
     inaperture     = getValidNumber("    input aperture value (f[valToInput]): ");// ask user if they want to input the exact focal ratio, or use a standard value. also inform them, that their camera does not say the actual focal ratio, but in reality is rounded up. Also ask user if they wish to input the diameter of the lens and the focal ratio.
     iniso          = (int)getValidNumber("    input iso: ");
-	cout	<< "Input Values:" << endl
-			<< "	input shutter speed value (1/[valToInput]):	"; cin >> inshutterSpeed;
-	cout	<< "	input aperture value (f[valToInput]): "; cin >> inaperture;	// ask user if they want to input the exact focal ratio, or use a standard value. also inform them, that their camera does not say the actual focal ratio, but in reality is rounded up. Also ask user if they wish to input the diameter of the lens and the focal ratio.
-	cout	<< "	input iso: "; cin >> iniso;
 	cout	<< endl;
 
 	// Display Values
