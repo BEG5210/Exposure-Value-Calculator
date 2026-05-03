@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Auther.h" />
+    <ClInclude Include="Constants.h" />
     <ClInclude Include="ISODetail.h" />
     <ClInclude Include="Name.h" />
     <ClInclude Include="CameraSettings.h" />
