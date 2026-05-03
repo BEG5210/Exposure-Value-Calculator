@@ -31,12 +31,13 @@ float getValidNumber(string message) {
 }
 
 void closeProgram() {
-	cout << "Press [ENTER] to close.";
+	cout	<< "Thank you for using this program!" << endl
+			<< "Press[ENTER] to close :";
 
 	cin.ignore();
 	cin.get();
 
-	cout << "Closing . . .";
+	cout << "Now closing . . .";
 }
 
 int main()
