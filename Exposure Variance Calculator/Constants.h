@@ -9,3 +9,7 @@ const std::string repoUrl = "https://github.com/BEG5210/Exposure-Variance-Calcul
 const float defaultShutterSpeed = 1.0f;
 const float defaultApeature = 1.0f;
 const int defaultIso = 100;
+
+// these are for ISO detail.
+const float defaultFocalLength = 1.0f;
+const float defaultApeatureDiamater = 1.0f;
