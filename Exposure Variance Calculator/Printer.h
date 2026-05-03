@@ -19,8 +19,9 @@ void printCopyright(const bool verbose) {
 			<< endl;
 }
 
-void printRepoInf() {
-	cout	<< "find out more about this program and its project here: https://github.com/BEG5210/Exposure-Variance-Calculator.git" << endl
+void printRepoInf(const string url = "https://github.com/BEG5210/Exposure-Variance-Calculator.git");
+void printRepoInf(const string url) {
+	cout	<< "To find out more about this program and the project, visit this link: " << url << endl
 			<< endl;
 }
 
