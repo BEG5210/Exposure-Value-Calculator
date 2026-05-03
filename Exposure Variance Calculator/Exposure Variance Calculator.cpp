@@ -6,11 +6,27 @@
 using std::endl;
 using std::cin;
 using std::cout;
+using std::string;
 
 
-// Eventially this functionality will be in a seperate file
 float CalculateExposureVariance(const float shutterSpeed, const float aperture, const int iso) {
 	return std::log2((std::pow(aperture, 2) * 100) / (iso / shutterSpeed));
+}
+
+// Check if input is a valid number
+float getValidNumber(string message) {
+    float value;
+    while (true) {
+        cout << message;
+        if (cin >> value) {
+            return value; // Success! Return the number and exit the loop.
+        }
+        
+        // If we get here, the user typed something wrong
+        cout << "Error: Please enter a numeric value." << std::endl;
+        cin.clear();
+        cin.ignore(1000, '\n');
+    }
 }
 
 int main()
@@ -38,6 +54,27 @@ int main()
 	int iniso; 
 
 	// Input Values
+  
+	/* 
+		
+		Changed this to the below input mehtod.
+		Added a method named as getValidNumber(string message) so that it takes the input from the user and asks it again and again 
+		if the user is giving wrong inputs and stops only when the user gives correct input. 
+
+			cout	<< "Input Values:" << endl;
+			cout 	<< "	input shutter speed value (1/[valToInput]):	"; cin >> inshutterSpeed;
+			cout	<< "	input aperture value (f[valToInput]): "; cin >> inaperture;	// ask user if they want to input the exact focal ratio, or use a standard value. also inform them, that their camera does not say the actual focal ratio, but in reality is rounded up. Also ask user if they wish to input the diameter of the lens and the focal ratio.
+			cout	<< "	input iso: "; cin >> iniso;
+
+		Now even though it completely does not allow something like "abc", "abc1", "a1bc", but it will allow strings such as
+		"1abc" by only taking 1 as the input for the variable and truncating the other left out "abc".
+
+	*/
+
+
+	inshutterSpeed = getValidNumber("    input shutter speed value (1/[valToInput]): ");
+    inaperture     = getValidNumber("    input aperture value (f[valToInput]): ");// ask user if they want to input the exact focal ratio, or use a standard value. also inform them, that their camera does not say the actual focal ratio, but in reality is rounded up. Also ask user if they wish to input the diameter of the lens and the focal ratio.
+    iniso          = (int)getValidNumber("    input iso: ");
 	cout	<< "Input Values:" << endl
 			<< "	input shutter speed value (1/[valToInput]):	"; cin >> inshutterSpeed;
 	cout	<< "	input aperture value (f[valToInput]): "; cin >> inaperture;	// ask user if they want to input the exact focal ratio, or use a standard value. also inform them, that their camera does not say the actual focal ratio, but in reality is rounded up. Also ask user if they wish to input the diameter of the lens and the focal ratio.
@@ -75,6 +112,8 @@ int main()
 
 	return 0;
 }
+
+// Eventially, functions outside of main will be in a seperate file
 
 
 /*	adding custom descriptions for each exposure level:
