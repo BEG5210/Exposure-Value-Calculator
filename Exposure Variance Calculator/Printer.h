@@ -5,6 +5,7 @@
 using std::cout;
 using std::endl;
 using std::string;
+#include "Constants.h"
 
 void printCopyright(const bool verbose = false);
 void printCopyright(const bool verbose) {

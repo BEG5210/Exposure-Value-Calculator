@@ -3,6 +3,7 @@
 #include <cmath>
 #include "CameraSettings.h"
 #include "Printer.h"
+#include "Constants.h"
 
 using std::endl;
 using std::cin;
@@ -31,12 +32,13 @@ float getValidNumber(string message) {
 }
 
 void closeProgram() {
-	cout << "Press [ENTER] to close.";
+	cout	<< "Thank you for using this program!" << endl
+			<< "Press[ENTER] to close :";
 
 	cin.ignore();
 	cin.get();
 
-	cout << "Closing . . .";
+	cout << "Now closing . . .";
 }
 
 int main()
